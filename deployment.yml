@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newnetcoreapp
+spec:
+  selector:
+    matchLabels:
+      app: newnetcoreapp-pod
+  template:
+    metadata:
+      labels:
+        app: newnetcoreapp-pod
+    spec:
+      containers:
+      - name: newnetcoreapp-container
+        image: imgnewnetcoreapp:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
