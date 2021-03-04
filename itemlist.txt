@@ -2,3 +2,4 @@ car
 bus
 bicycle
 skateboard
+motorcycle
