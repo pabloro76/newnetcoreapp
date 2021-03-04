@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "demoakscluster-7069"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "demoakscluster-7069"
+  template:
+    metadata:
+      labels:
+        app: "demoakscluster-7069"
+    spec:
+      containers:
+        - name: "demoakscluster-7069"
+          image: "acr4kubernetes.azurecr.io/demoakscluster"
+          ports:
+          - containerPort: 80
